@@ -44,7 +44,7 @@
     }
 
     /**
-     * 发起 API 请求，参数包括 endpoint、model、apiKey、messages（必传）以及其他可选参数（如 temperature）
+     * 使用油猴 API `GM_xmlhttpRequest` 发起聊天补全请求，参数包括 endpoint、model、apiKey、messages（必传）以及其他可选参数（如 temperature）
      * @param {object} options 
      * @param {string} options.endpoint 请求地址
      * @param {string} options.model 模型名称
@@ -92,7 +92,5 @@
             });
         });
     }
-
-    // 将函数挂载到全局对象，供其他脚本调用
     window.chatCompletion = chatCompletion;
 })();
