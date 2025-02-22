@@ -17,7 +17,7 @@ try {
     }, (chunk) => {
         console.log('实时消息：', chunk);
         rawText += chunk;
-        ...  //其他操作，比如在 "&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;" 中实时显示消息内容，即 "rawText" 的值
+        ...  //其他操作，比如在 "&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;" 中实时显示当前已接收的消息内容，即 "rawText" 的值
     });
     ...  //其他操作
 } catch (error) {
