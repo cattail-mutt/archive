@@ -15,7 +15,6 @@
                     return partial;
                 }
                 const chunkText = textDecoder.decode(value, { stream: true });
-                // 按行处理 SSE 格式的响应
                 const lines = chunkText.split('\n').filter(line => line.trim());
                 for (const line of lines) {
                     if (!line.startsWith('data: ')) continue;
@@ -77,6 +76,11 @@
                 data: JSON.stringify(payload),
                 responseType: 'stream',
                 async onloadstart(response) {
+                    if (response.status !== 200) {
+                        reject(new Error(`HTTP error! status: ${response.status}`));
+                        return;
+                    }
+
                     try {
                         const reader = response.response.getReader();
                         const textDecoder = new TextDecoder();
