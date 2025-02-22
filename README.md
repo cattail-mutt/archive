@@ -18,7 +18,7 @@ try {
         console.log('实时消息：', chunk);
         rawText += chunk;
         console.log('实时累积响应：', rawText);
-        ...  //其他操作
+        ...  //其他操作，比如在 "&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;" 中实时显示消息内容
     });
     ...  //其他操作
 } catch (error) {
