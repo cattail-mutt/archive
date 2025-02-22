@@ -16,8 +16,8 @@
 </code></pre>
 <p>说明：</p>
 <p>  1. 请注意在脚本头部的元数据部分声明：</p>
-<pre><code>    // @grant        GM_xmlhttpRequest
-    // @require      https://raw.githubusercontent.com/cattail-mutt/archive/refs/heads/main/openai/chatCompletion.js
+<pre><code>// @grant        GM_xmlhttpRequest
+// @require      https://raw.githubusercontent.com/cattail-mutt/archive/refs/heads/main/openai/chatCompletion.js
 </code></pre>
 <p>  2. 必须传入的参数包括 endPoint, apiKey, model, messages, 此外，还可以传入温度等其他参数。</p>
 <p>  2. chunk 是流式响应中的文本消息（片段）的内容，可以通过 `rawText += chunk;` 积累。</p>
